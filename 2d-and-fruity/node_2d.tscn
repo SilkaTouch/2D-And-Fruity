@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcdx3ijxlq80y"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_y2lfg"]
+[ext_resource type="Texture2D" uid="uid://cy72w781tkk6n" path="res://assets/max.png" id="2_fi1qe"]
+[ext_resource type="PackedScene" uid="uid://dcdx3ijxlq80y" path="res://node_2d.tscn" id="3_le01p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xuaxv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fi1qe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_y2lfg")
+
+[node name="Node2D" parent="." instance=ExtResource("3_le01p")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+scale = Vector2(0.0625, 0.0625)
+sprite_frames = SubResource("SpriteFrames_xuaxv")
