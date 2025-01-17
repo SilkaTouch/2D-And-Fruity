@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl0s1q10rgvw"]
+[gd_scene load_steps=7 format=3 uid="uid://1npp5xnnok8i"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_2meuy"]
-[ext_resource type="Texture2D" uid="uid://dxucf8e43fhws" path="res://assets/spritesheet-Sheet.png" id="2_n4dml"]
+[ext_resource type="Script" path="res://character_body_2d_2.gd" id="1_idcv8"]
+[ext_resource type="Texture2D" uid="uid://evf4t8hpt3wf" path="res://assets/humansheet.png" id="2_mv80d"]
 
 [sub_resource type="Animation" id="Animation_c1yd0"]
 length = 0.001
@@ -41,28 +41,28 @@ _data = {
 "walk": SubResource("Animation_6mslk")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8fr5"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u7uni"]
 radius = 24.0
 height = 128.0
 
 [node name="Node2D" type="Node2D"]
 
-[node name="AlienBody" type="CharacterBody2D" parent="."]
-script = ExtResource("1_2meuy")
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+script = ExtResource("1_idcv8")
 
-[node name="Sprite2D" type="Sprite2D" parent="AlienBody"]
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
 position = Vector2(0, 128)
 scale = Vector2(8, 8)
-texture = ExtResource("2_n4dml")
+texture = ExtResource("2_mv80d")
 centered = false
 hframes = 8
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AlienBody/Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2/Sprite2D"]
 libraries = {
 "": SubResource("AnimationLibrary_oka65")
 }
 speed_scale = 1.482
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AlienBody"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
 position = Vector2(64, 192)
-shape = SubResource("CapsuleShape2D_c8fr5")
+shape = SubResource("CapsuleShape2D_u7uni")

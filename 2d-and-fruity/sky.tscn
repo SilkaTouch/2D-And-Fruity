@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfkwb4slfy7tw"]
+[gd_scene load_steps=5 format=3 uid="uid://dfkwb4slfy7tw"]
 
 [ext_resource type="Texture2D" uid="uid://cvw86b1l5gly6" path="res://assets/sky.png" id="1_r5ki4"]
 [ext_resource type="PackedScene" uid="uid://b2lda528k3mrh" path="res://concrete_floor.tscn" id="1_wbtd3"]
 [ext_resource type="PackedScene" uid="uid://bl0s1q10rgvw" path="res://max.tscn" id="3_1236a"]
+[ext_resource type="PackedScene" uid="uid://1npp5xnnok8i" path="res://human.tscn" id="4_riqwq"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -66,3 +67,6 @@ position = Vector2(1024, 512)
 
 [node name="StaticBody2D17" parent="." instance=ExtResource("1_wbtd3")]
 position = Vector2(1088, 512)
+
+[node name="Node2D" parent="." instance=ExtResource("4_riqwq")]
+position = Vector2(776, 248)
